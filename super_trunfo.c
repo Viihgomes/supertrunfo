@@ -33,16 +33,13 @@ int main(){
     printf("Digite a quantidade de ponto turístico: \n");
     scanf("%d",&pontotu1);
 
-    printf("Dados da carta!.\n");
+    printf("Dados da carta 1!.\n");
 
     printf("Estado: %s \nCódigo: %s \nCidade: %s \n",estado1,codigo1,cidade1);
     printf("População %d \nÁrea: %f\nPIB: %f \n", populacao1,area1,pib1);
     printf("Ponto turístico: %d \n",pontotu1);
 
-   
-}
-    #include <stdio.h>
-int main (){
+
     char estado2[2];
     char codigo2[4];
     char cidade2[20];
@@ -75,7 +72,7 @@ int main (){
     printf("Digite a quantidade de ponto turístico: \n");
     scanf("%d",&pontotu2);
 
-    printf("Dados da carta!.\n");
+    printf("Dados da carta 2!.\n");
     
     printf("Estado: %s \nCódigo: %s \nCidade: %s \n",estado2,codigo2,cidade2);
     printf("População %d \nÁrea: %f\nPIB: %f \n", populacao2,area2,pib2);
@@ -83,3 +80,6 @@ int main (){
 
 
 }
+
+    
+    
