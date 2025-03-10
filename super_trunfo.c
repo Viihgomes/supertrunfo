@@ -78,6 +78,23 @@ int main(){
     printf("População %d \nÁrea: %f\nPIB: %f \n", populacao2,area2,pib2);
     printf("Ponto turístico: %d \n",pontotu2);
 
+    int escolha;
+    printf("Escolha o atributo que deseja realizar a comparação!\n");
+    printf("1. Número da população\n");
+    printf("2. PIB\n");
+    printf("3. Area km²\n");
+    printf("4. Número de ponto turistico\n");
+    scanf("%d",&escolha);
+
+    switch (expression)
+    {
+    case constant expression:
+        /* code */
+        break;
+    
+    default:
+        break;
+    }
 
 }
 
