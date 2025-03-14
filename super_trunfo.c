@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    char estado1[2];
+    char estado1[100];
     char codigo1[4];
     char cidade1[20];
     int populacao1;
@@ -16,7 +16,7 @@ int main(){
     scanf("%s",estado1);
 
     printf("Digite o código da carta: \n");
-    scanf("%s", &codigo1);
+    scanf("%d", &codigo1);
 
     printf("Digite a cidade: \n");
     scanf("%s",cidade1);
@@ -35,12 +35,12 @@ int main(){
 
     printf("\nDados da carta 1!.\n");
 
-    printf("\nEstado: %s \nCódigo: %s \nCidade: %s \n",estado1,codigo1,cidade1);
+    printf("\nEstado: %s \nCódigo: %d \nCidade: %s \n",estado1,codigo1,cidade1);
     printf("População %d \nÁrea: %f\nPIB: %f \n", populacao1,area1,pib1);
     printf("Ponto turístico: %d \n",pontotu1);
 
 
-    char estado2[2];
+    char estado2[100];
     char codigo2[4];
     char cidade2[20];
     int populacao2;
@@ -55,7 +55,7 @@ int main(){
     scanf("%s",estado2);
 
     printf("Digite o código da carta: \n");
-    scanf("%s", &codigo2);
+    scanf("%d", &codigo2);
 
     printf("Digite a cidade: \n");
     scanf("%s",cidade2);
@@ -74,9 +74,11 @@ int main(){
 
     printf("\nDados da carta 2!.\n");
     
-    printf("\nEstado: %s \nCódigo: %s \nCidade: %s \n",estado2,codigo2,cidade2);
+    printf("\nEstado: %s \nCódigo: %d \nCidade: %s \n",estado2,codigo2,cidade2);
     printf("População %d \nÁrea: %f\nPIB: %f \n", populacao2,area2,pib2);
     printf("Ponto turístico: %d \n",pontotu2);
+
+    
 
     int escolha;
     printf("Escolha o atributo que deseja realizar a comparação!\n");
@@ -84,19 +86,80 @@ int main(){
     printf("2. PIB\n");
     printf("3. Area km²\n");
     printf("4. Número de ponto turistico\n");
+    while (getchar() != '\n');  
     scanf("%d",&escolha);
 
-    switch (expression)
-    {
-    case constant expression:
-        /* code */
-        break;
-    
-    default:
-        break;
-    }
+    printf("Opção digitada: %d\n",escolha);
 
+
+    switch (escolha) {
+        case 1: // População
+            printf("Número da população:\n");
+            printf("Estado carta um : %s\n", estado1);
+            printf("Estado carta dois : %s\n", estado2);
+            if (populacao1 > populacao2) {
+                printf("Carta um venceu %d\n", populacao1);
+                printf("Carta que perdeu %d\n", populacao2);
+            } else if (populacao1 < populacao2) {
+                printf("Carta dois venceu %d\n", populacao2);
+                printf("Carta que perdeu %d\n", populacao1);
+            } else {
+                printf("O jogo empatou\n");
+            }
+            break;
+    
+        case 2: // PIB
+            printf("PIB:\n");
+            printf("Estado carta um : %s\n", estado1);
+            printf("Estado carta dois : %s\n", estado2);
+            if (pib1 > pib2) {
+                printf("Carta um venceu %f\n", pib1);
+                printf("Carta que perdeu %f\n", pib2);
+            } else if (pib1 < pib2) {
+                printf("Carta dois venceu %f\n", pib2);
+                printf("Carta que perdeu %f\n", pib1);
+            } else {
+                printf("O jogo empatou\n");
+            }
+            break;
+    
+        case 3: // Área
+            printf("Área km²:\n");
+            printf("Estado carta um : %s\n", estado1);
+            printf("Estado carta dois : %s\n", estado2);
+            if (area1 > area2) {
+                printf("Carta um venceu %f\n", area1);
+                printf("Carta que perdeu %f\n", area2);
+            } else if (area1 < area2) {
+                printf("Carta dois venceu %f\n", area2);
+                printf("Carta que perdeu %f\n", area1);
+            } else {
+                printf("O jogo empatou\n");
+            }
+            break;
+    
+        case 4: // Pontos turísticos
+            printf("Número de pontos turísticos:\n");
+            printf("Estado carta um : %s\n", estado1);
+            printf("Estado carta dois : %s\n", estado2);
+            if (pontotu1 > pontotu2) {
+                printf("Carta um venceu %d\n", pontotu1);
+                printf("Carta que perdeu %d\n", pontotu2);
+            } else if (pontotu1 < pontotu2) {
+                printf("Carta dois venceu %d\n", pontotu2);
+                printf("Carta que perdeu %d\n", pontotu1);
+            } else {
+                printf("O jogo empatou\n");
+            }
+            break;
+    
+        default:
+            printf("Opção inválida!\n");
+            break;
+            
+    }
 }
+    
 
     
     
